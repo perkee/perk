@@ -8,7 +8,7 @@ class CreateShopSnacksTable extends Migration {
 	private $table_name;
 
 	public function __construct(){
-		$this->table_name = 'shop_snacks';
+		$this->table_name = 'shop_snack';
 	}
 
 	/**

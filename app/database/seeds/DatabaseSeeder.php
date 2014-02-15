@@ -14,6 +14,7 @@ class DatabaseSeeder extends Seeder {
 		// $this->call('UserTableSeeder');
 		$this->call('SnackTableSeeder');
 		$this->call('ShopTableSeeder');
+		$this->call('ShopSnackTableSeeder');
 	}
 
 }
@@ -73,8 +74,7 @@ class SnackTableSeeder extends Seeder {
 }
 
 class ShopTableSeeder extends Seeder {
-	public function run()
-	{
+	public function run(){
 		DB::table('shops')->delete();
 
 		$shops = array(
@@ -97,5 +97,29 @@ class ShopTableSeeder extends Seeder {
 		foreach($shops as $shop){
 			Shop::create($shop);
 		}
+	}
+}
+
+class ShopSnackTableSeeder extends Seeder{
+	public function run(){
+		$shop_snacks = array(
+			[1,1],
+			[1,5],
+			[1,6],
+			[1,7],
+			[2,1],
+			[3,1],
+			[3,2],
+			[3,3],
+			[3,4],
+			[3,4]
+			);
+		foreach($shop_snacks as $idx => $val){
+			$shop_snacks[$idx] = array(
+				'shop_id'  => $val[0],
+				'snack_id' => $val[1]
+				);
+		}
+		DB::table('shop_snack')->insert($shop_snacks);
 	}
 }
