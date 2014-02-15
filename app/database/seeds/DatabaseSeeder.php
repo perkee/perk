@@ -103,21 +103,22 @@ class ShopTableSeeder extends Seeder {
 class ShopSnackTableSeeder extends Seeder{
 	public function run(){
 		$shop_snacks = array(
-			[1,1],
-			[1,5],
-			[1,6],
-			[1,7],
-			[2,1],
-			[3,1],
-			[3,2],
-			[3,3],
-			[3,4],
-			[3,5]
+			[1,1,150],
+			[1,5,100],
+			[1,6,125],
+			[1,7,125],
+			[2,1,125],
+			[3,1,125],
+			[3,2,699],
+			[3,3,299],
+			[3,4,100],
+			[3,5,100]
 			);
 		foreach($shop_snacks as $idx => $val){
 			$shop_snacks[$idx] = array(
 				'shop_id'  => $val[0],
-				'snack_id' => $val[1]
+				'snack_id' => $val[1],
+				'price'    => $val[2]
 				);
 		}
 		DB::table('shop_snack')->insert($shop_snacks);
