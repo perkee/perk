@@ -102,7 +102,7 @@ class ShopTableSeeder extends Seeder {
 
 class ShopSnackTableSeeder extends Seeder{
 	public function run(){
-		$shop_snacks = array(
+		$shop_snacks = array(// php 4.5 syntax, sue me.
 			[1,1,150],
 			[1,5,100],
 			[1,6,125],

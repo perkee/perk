@@ -5,7 +5,7 @@
 		<h2>{{ $shop->name }}</h2>
 		<ul>
 		@foreach($shop->snacks as $snack)
-			<li>{{ $snack->name }}: {{ $snack->pivot->price }}</li>
+			<li>{{ $snack->name }}: {{ sprintf('$%1.02f',$snack->pivot->price/100) }}</li>
 		@endforeach
 		</ul>
 	@endforeach
