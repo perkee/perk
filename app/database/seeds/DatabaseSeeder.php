@@ -112,7 +112,7 @@ class ShopSnackTableSeeder extends Seeder{
 			[3,2],
 			[3,3],
 			[3,4],
-			[3,4]
+			[3,5]
 			);
 		foreach($shop_snacks as $idx => $val){
 			$shop_snacks[$idx] = array(
