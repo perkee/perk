@@ -19,7 +19,7 @@ class CreateSnacksTable extends Migration {
 			$table->increments('id');
 			$table->string('name');
 			$table->string('type')->default('food');//or 'drink'
-			$table->integer('upc')->unsigned()->default(0)->unique();
+			$table->bigInteger('upc')->unsigned()->default(null);
 			$table->integer('calories')->unsigned()->default(0);
 			$table->index('upc');
 			$table->timestamps();

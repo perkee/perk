@@ -11,7 +11,15 @@
 |
 */
 
-Route::get('/', function()
-{
+Route::get('/', function(){
 	return View::make('hello');
 });
+
+Route::get('butt', function(){
+	return 'butt';
+});
+
+Route::get('shops',function(){
+	return View::make('shops');
+});
+

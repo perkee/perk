@@ -25,18 +25,46 @@ class SnackTableSeeder extends Seeder {
 
 		$snacks = array(
 			array(
-				'name'   => '20 oz Diet Coke',
-				'upc'    => '4904500',
-				'type'   => 'drink'
+				'name' => '20 oz Diet Coke',
+				'upc'  => 4904500,
+				'type' => 'drink'
 				),
 			array(
 				'name'   => 'Mixed Nuts by Weight'
 				),
 			array(
-				'name'   => 'Arizona Diet Peach Iced Tea',
-				'upc'    => '613008719548',
-				'type'   => 'drink'
+				'name'   => 'Raw Peanuts by Weight'
 				),
+			array(
+				'name' => 'Arizona Diet Peach Iced Tea',
+				'upc'  => '613008719548',
+				'type' => 'drink'
+				),
+			array(
+				'name' => 'Arizona Diet Green Tea with Ginseng',
+				'upc'  => '613008720711',
+				'type' => 'drink'
+				),
+			array(
+				'name'     => 'Barcel Toreados Habanero Peanuts 3.2oz',
+				'upc'      => '757528008970',
+				'calories' => 570
+				),
+			array(
+				'name'     => 'Barcel Toreados Extra Spicy Peanuts 3.2oz',
+				'upc'      => '757528008963',
+				'calories' => 570
+				),
+			array(
+				'name'     => 'Trophy Nuts Hot-N-Spicy Peanuts',
+				'upc'      => '74249501376',
+				'calories' => 486
+				),
+			array(
+				'name'     => 'Blue Diamond Wasabi Soy Sauce Almonds',
+				'upc'      => '41570052303',
+				'calories' => 260
+				)
 			);
 		foreach($snacks as $snack){
 			Snack::create($snack);

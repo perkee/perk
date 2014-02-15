@@ -3,13 +3,14 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateShopsTable extends Migration {
+class CreateShopSnacksTable extends Migration {
 
 	private $table_name;
 
 	public function __construct(){
-		$this->table_name = 'shops';
+		$this->table_name = 'shop_snacks';
 	}
+
 	/**
 	 * Run the migrations.
 	 *
@@ -17,13 +18,12 @@ class CreateShopsTable extends Migration {
 	 */
 	public function up()
 	{
+		
 		Schema::create($this->table_name,function($table){
 			$table->increments('id');
-			$table->string('name',100);
-			$table->string('street',100);
-			$table->integer('zip')->unsigned();
-			$table->float('lat')->nullable();
-			$table->float('lng')->nullable();
+			foreach (array('shop_id','snack_id','price') as $field) {
+				$table->integer($field)->unsigned();
+			}
 			$table->timestamps();
 		});
 	}
