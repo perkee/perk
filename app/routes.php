@@ -20,6 +20,7 @@ Route::get('butt', function(){
 });
 
 Route::get('shops',function(){
-	return View::make('shops');
+	$shops = Shop::all();
+	return View::make('shops')->with('shops',$shops);
 });
 

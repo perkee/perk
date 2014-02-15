@@ -18,7 +18,6 @@ class CreateShopSnacksTable extends Migration {
 	 */
 	public function up()
 	{
-		
 		Schema::create($this->table_name,function($table){
 			$table->increments('id');
 			foreach (array('shop_id','snack_id','price') as $field) {
