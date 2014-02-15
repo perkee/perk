@@ -23,4 +23,7 @@ Route::get('shops',function(){
 	$shops = Shop::all();
 	return View::make('shops')->with('shops',$shops);
 });
-
+Route::get('snacks',function(){
+	$snacks = Snack::all();
+	return View::make('snacks')->with('snacks',$snacks);
+});
