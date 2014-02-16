@@ -1,7 +1,7 @@
 @extends('default')
 
 <?php
-	//$title = 'shops';
+	$title = 'shops';
 ?>
 @section('content')
 	@foreach($shops as $shop)

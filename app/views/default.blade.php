@@ -1,8 +1,3 @@
-<?
-//default values
-$title = 'no title';
-?>
-
 <!doctype html>
 <html lang="en">
 <head>
