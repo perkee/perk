@@ -1,5 +1,8 @@
 @extends('default')
 
+<?php
+	//$title = 'shops';
+?>
 @section('content')
 	@foreach($shops as $shop)
 		<h2>{{ $shop->name }}</h2>
