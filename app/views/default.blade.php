@@ -6,6 +6,6 @@
 </head>
 <body>
 	<h1>{{isset($title) ? $title : 'no title'}}</h1>
-	@yield('content')
+@yield('content')
 </body>
 </html>

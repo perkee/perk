@@ -15,8 +15,14 @@ Route::get('/', function(){
 	return View::make('hello');
 });
 
-Route::get('butt', function(){
-	return 'butt';
+Route::get('new-snack', function(){
+	return View::make('new-snack')->with('shops',Shop::all());
+});
+Route::get('new-shop', function(){
+	return View::make('new-shop')->with('snacks',Snack::all());
+});
+Route::post('new-shop', function(){
+	return json_encode(Input::all());
 });
 
 Route::get('shops',function(){
