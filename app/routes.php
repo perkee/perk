@@ -11,6 +11,8 @@
 |
 */
 
+View::share('ajax',Request::ajax());
+
 Route::get('/', function(){
 	return View::make('hello');
 });
