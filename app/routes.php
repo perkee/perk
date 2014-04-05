@@ -33,3 +33,17 @@ Route::get('snacks',function(){
 	$snacks = Snack::all();
 	return View::make('snacks')->with('snacks',$snacks);
 });
+
+
+
+App::missing(function($exception)
+{
+   $view_name = 'pages/'.Request::path();
+   $view_file = __DIR__."/views/{$view_name}.blade.php";
+   if(file_exists($view_file)){
+   	return View::make($view_name);
+   }
+   else{
+   	return Response::view('errors/404', array(), 404);
+   }
+});
