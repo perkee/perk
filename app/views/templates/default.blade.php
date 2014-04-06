@@ -10,7 +10,7 @@
 		{{ isset($title) ? "<h1>$title</h1>" : ''}}
 		<nav>nav goes here</nav>
 	</header>
-	<article id="main">
+	<article id="content">
 @yield('content')
 	</article>
 	<footer>

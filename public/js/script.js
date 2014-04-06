@@ -1,9 +1,10 @@
 (function($){
 	//onload
 	$(function(){
+	$('a').on('click',function(evt){
+		evt.preventDefault();
 		var jqxhr = $.ajax({
-			url:  document.location.href,
-			data: {baz:1,bar:2},
+			url:  this.href,
 			type: 'GET',
 			dataType: 'json'
 		});
@@ -11,7 +12,9 @@
 			console.error(jqxhr,textStatus,errorThrown);
 		});
 		jqxhr.done(function(data){
-			console.log(data);
+			$('#content').html(data.content);
 		});
+	});
+		return false;
 	});
 })(jQuery);

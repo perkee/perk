@@ -9,5 +9,9 @@
 ?>
 
 @section('content')
-	<p>The foo page has boring content</p>
+	<p>
+		The foo page has boring content
+		including a link to <a href="{{ URL::to('jux')}}">jux</a>
+	</p>
+
 @stop
