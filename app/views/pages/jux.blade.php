@@ -1,3 +1,14 @@
+@extends('templates/page')
+
+@section('meta')
+	<meta name="description" content="big table of what jukies do what in what rap groups">
+@stop
+
+@section('title')
+The incomplete Def Jux compatibility matrix
+@stop
+
+@section('content')
 <table>
 	<thead>
 		<tr>
@@ -208,3 +219,4 @@
 		</tr>
 	</tbody>
 </table>
+@stop

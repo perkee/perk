@@ -44,10 +44,12 @@ App::missing(function($exception)
    $view_name = "pages/$path";
    $view_file = __DIR__."/views/{$view_name}.blade.php";
    if(file_exists($view_file)){
+   	$view = View::make($view_name);
    	if(Request::ajax()){
 	  	return Response::json(array(
-	  		'content' => View::make($view_name)->render(),
-	  		'path'    => $path
+	  		'sections' => $view->renderSections(),
+	  		'data'    => $view->getData(),
+	  		'path'     => $path
 	  		));
 	  }
 	  else{

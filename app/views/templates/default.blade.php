@@ -2,12 +2,14 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-@yield('meta')
-	<title>{{ isset($title) ? $title : 'Default page title' }}</title>
+	@yield('meta')
+	<title>
+		@yield('title','default page title')
+	</title>
 </head>
 <body>
 	<header>
-		{{ isset($title) ? "<h1>$title</h1>" : ''}}
+		<h1>@yield('title','default page title')</h1>
 		<nav>nav goes here</nav>
 	</header>
 	<article id="content">

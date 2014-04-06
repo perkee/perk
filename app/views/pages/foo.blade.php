@@ -4,9 +4,9 @@
 	<meta name="description" content="dscription of foo">
 @stop
 
-<?php
-	$title = 'The Foo page';
-?>
+@section('title')
+The Foo page
+@stop
 
 @section('content')
 	<p>
