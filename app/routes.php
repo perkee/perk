@@ -40,12 +40,14 @@ Route::get('snacks',function(){
 
 App::missing(function($exception)
 {
-   $view_name = 'pages/'.Request::path();
+	$path = Request::path();
+   $view_name = "pages/$path";
    $view_file = __DIR__."/views/{$view_name}.blade.php";
    if(file_exists($view_file)){
    	if(Request::ajax()){
 	  	return Response::json(array(
-	  		'content' => View::make($view_name)->render()
+	  		'content' => View::make($view_name)->render(),
+	  		'path'    => $path
 	  		));
 	  }
 	  else{

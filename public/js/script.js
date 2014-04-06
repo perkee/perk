@@ -13,6 +13,8 @@
 		});
 		jqxhr.done(function(data){
 			$('#content').html(data.content);
+			console.log(null,null,data.path);
+			history.pushState(null,null,data.path);
 		});
 	});
 		return false;
